@@ -11,7 +11,7 @@ function Postpage(){
     console.log(view);
     let dataform=new FormData(view);
     console.log(dataform);
-    await fetch('',{
+    await fetch('https://backend-insta-62n5.onrender.com/Postdata',{
         method:'Post',
         body:dataform
     }).then(res=>res.json()).then((d)=>{
