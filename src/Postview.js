@@ -6,6 +6,7 @@ const Postview=()=>{
     const[posts,setPosts]=useState([]);
     useEffect(()=>{
         fetch("https://backend-insta-62n5.onrender.com/getdata").then((res)=>res.json()).then((data)=>{
+            data.reverse();
              setPosts(data)
         }).catch((err)=>{
            if(err){
